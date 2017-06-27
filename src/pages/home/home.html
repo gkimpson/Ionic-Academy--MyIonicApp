@@ -7,11 +7,20 @@
 </ion-header>
 
 <ion-content padding>
-  
-  <ion-list>
-    <ion-item *ngFor="let name of myArray" (click)="someFunction()" >
+
+<ion-list>
+  <ion-item-sliding *ngFor="let name of myArray">
+    <ion-item >
       {{ name }}
     </ion-item>
-  </ion-list>
+    <ion-item-options >
+      <button ion-button side="right">
+        <ion-icon name="mail"></ion-icon>
+        Email
+      </button>
+    </ion-item-options>
+    
+  </ion-item-sliding>
+</ion-list>
 
 </ion-content>
