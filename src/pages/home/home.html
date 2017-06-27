@@ -1,26 +1,17 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      {{ app_title }}
+      
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-
-  <ion-item>
-    <ion-input type="number" [(ngModel)]="a"></ion-input>
-  </ion-item>
-
-  <ion-item>
-    <ion-input type="number" [(ngModel)]="b"></ion-input>
-  </ion-item>
-
-  <button ion-button (click)="calculate()">Calculate Me</button>
-  <br>
   
-  a: {{ a }}<br>
-  b: {{ b }}<br>
-  <h3>{{ result }}</h3>
+  <ion-list>
+    <ion-item *ngFor="let name of myArray" (click)="someFunction()" >
+      {{ name }}
+    </ion-item>
+  </ion-list>
 
 </ion-content>
