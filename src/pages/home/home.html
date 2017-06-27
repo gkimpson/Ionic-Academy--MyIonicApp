@@ -7,7 +7,20 @@
 </ion-header>
 
 <ion-content padding>
+
+  <ion-item>
+    <ion-input type="number" [(ngModel)]="a"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input type="number" [(ngModel)]="b"></ion-input>
+  </ion-item>
+
   <button ion-button (click)="calculate()">Calculate Me</button>
   <br>
-  {{ result }}
+  
+  a: {{ a }}<br>
+  b: {{ b }}<br>
+  <h3>{{ result }}</h3>
+
 </ion-content>
